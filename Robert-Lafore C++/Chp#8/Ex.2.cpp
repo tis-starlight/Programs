@@ -9,7 +9,7 @@ s3 = s1 += s2;
 
 #include <iostream>
 #include <cstring>		//for strcpy(), strlen()
-#include <process.h>	//for exit()
+#include <process.h>		//for exit()
 using namespace std;
 
 class String		//user-defined string type
@@ -19,11 +19,11 @@ private:
 	char str[SZ];		//holds a C-string
 
 public:
-	String() //no-arg constructor
+	String() 	//no-arg constructor
 	{
 		strcpy_s(str, "");
 	}
-	String(char s[]) //1-arg constructor
+	String(const char* s) //1-arg constructor
 	{
 		strcpy_s(str, s);
 	}
